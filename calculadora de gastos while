@@ -1,0 +1,25 @@
+orçamento=int(input("Digite seu orçamento para essa compra: R$,"))
+
+qtdproduto=0
+produto=0
+somaproduto=0
+
+while somaproduto<orçamento:
+
+    produto=float(input("Digite o valor do produto: R$, "))
+
+    somaproduto=produto+somaproduto
+
+    if somaproduto<=orçamento:
+
+        orçamento_descontado=orçamento-somaproduto
+
+        qtdproduto=qtdproduto+1
+
+        mediaproduto=(somaproduto/qtdproduto)
+
+        print("sua conta esta em: R$, ",somaproduto,". A média do valor de cadaproduto é:",mediaproduto,". Resta: R$,",orçamento_descontado)
+
+    else:
+        produto_final=somaproduto-produto
+        print("O valor do último item está acima do restante do orçamento. Sua compra deu R$ ",produto_final,". Restou; R$",orçamento_descontado,". A média do valor de cadaproduto é:",mediaproduto)
